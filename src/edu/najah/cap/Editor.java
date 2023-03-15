@@ -39,8 +39,8 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 
 	public JEditorPane TP;//Text Panel
 	public JMenuBar menu;//Menu
-	public JMenuItem copy, paste, cut, move;
-	public boolean changed = false;
+	 JMenuItem copy, paste, cut, move;
+	 boolean changed = false;
 	protected File file;
 	
 	private String[] actions = {"Open","Save","New","Edit","Quit", "Save as..."};
@@ -89,7 +89,7 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 		save.addActionListener(this);
 		save.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
 		JMenuItem saveas = new JMenuItem(actions[5]);
-		saveas.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK | InputEvent.SHIFT_MASK));
+		saveas.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S));
 		jmfile.add(saveas);
 		saveas.addActionListener(this);
 		JMenuItem quit = new JMenuItem(actions[4]);
